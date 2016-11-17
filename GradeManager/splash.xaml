@@ -1,0 +1,131 @@
+﻿<Page x:Class="GradeManager.splash"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GradeManager"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="splash">
+
+    <Grid>
+
+
+        <WrapPanel
+                       Width="714"
+                       Height="330"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center" Margin="0,50,0,0" >
+            
+            
+            <Controls:Tile Title="GPA Calculator"
+                                x:Name="gpaTile"
+                                Margin="5"
+                                Height="155"
+                                Width="330"
+                                TitleFontSize="14"
+                                TextOptions.TextFormattingMode="Display"
+                                TextOptions.TextRenderingMode="ClearType"
+                                Background="Teal"
+                                Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                                HorizontalTitleAlignment="Left" Click="gpaTile_Click">
+                <iconPacks:PackIconModern Width="40"
+                                             Height="40"
+                                             Kind="Calculator" />
+            </Controls:Tile>
+
+            <Controls:Tile Title="Manage"
+                           Margin="5"
+                           Height="155"
+                           Width="177"
+                           TitleFontSize="14"
+                           TextOptions.TextFormattingMode="Display"
+                           TextOptions.TextRenderingMode="ClearType"
+                           Background="Silver"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Left" x:Name="manageTile" Click="manageTile_Click">
+                <iconPacks:PackIconModern Width="40"
+                                         Height="40"
+                                         Kind="Tools"/>
+            </Controls:Tile>
+
+            <Controls:Tile Title="Profile"
+                           Margin="5"
+                           TitleFontSize="14"
+                           Height="155"
+                           Width="177"
+                           TextOptions.TextFormattingMode="Display"
+                           TextOptions.TextRenderingMode="ClearType"
+                           Background="Silver"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           HorizontalTitleAlignment="Left"
+                           x:Name="profileTile" Click="profileTile_Click"
+                           >
+                <iconPacks:PackIconModern Width="40"
+                                         Height="40"
+                                         Kind="PeopleProfile"/>
+
+            </Controls:Tile>
+
+            <Controls:Tile Title="Money Calculator"
+                           Margin="5"
+                           TitleFontSize="14"
+                           Height="155"
+                           Width="330"
+                           TextOptions.TextFormattingMode="Display"
+                           TextOptions.TextRenderingMode="ClearType"
+                           Background="Teal"
+                           HorizontalTitleAlignment="Left"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           x:Name="moneyTile" Click="moneyTile_Click">
+
+                <iconPacks:PackIconModern Width="40"
+                                          Height="40"
+                                          Kind="Money"/>
+            </Controls:Tile>
+
+            <Controls:Tile Title="Hypo"
+                           Margin="5"
+                           Height="155"
+                           Width="177"
+                           TitleFontSize="14"
+                           TextOptions.TextFormattingMode="Display"
+                           TextOptions.TextRenderingMode="ClearType"
+                           Background="Silver"
+                           HorizontalTitleAlignment="Left"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           x:Name="hypoTile" Click="hypoTile_Click">
+
+                <iconPacks:PackIconModern Width="40"
+                                          Height="40"
+                                          Kind="Question" />
+            </Controls:Tile>
+
+            <Controls:Tile Title="Stats"
+                           Margin="5"
+                           Width="177"
+                           Height="155"
+                           TitleFontSize="14"
+                           TextOptions.TextFormattingMode="Display"
+                           TextOptions.TextRenderingMode="ClearType"
+                           Background="Silver"
+                           HorizontalTitleAlignment="Left"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource BlackBrush}"
+                           x:Name="statsTile" Click="statsTile_Click">
+
+                <iconPacks:PackIconModern Width="40"
+                                          Height="40"
+                                          Kind="GraphBar"/>
+
+            </Controls:Tile>
+
+
+        </WrapPanel>
+        <Label x:Name="Splashlbl" Content="GradeManager V3" HorizontalAlignment="Left" Margin="40,20,0,0" VerticalAlignment="Top" FontSize="26" FontWeight="ExtraBlack"/>
+
+
+    </Grid>
+</Page>
