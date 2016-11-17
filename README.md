@@ -1,4 +1,4 @@
 # GradeManager
-Manger to save grades and calculate benchmarks
+Manager to save grades and calculate benchmarks
 
 WIP
