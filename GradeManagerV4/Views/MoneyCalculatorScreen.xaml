@@ -1,0 +1,279 @@
+﻿<Page x:Class="GradeManagerV4.Views.MoneyCalculatorScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:GradeManagerV4.Views"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      Title="MoneyCalculatorScreen">
+
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="8*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="8*" />
+            </Grid.RowDefinitions>
+
+            <Button Name="BackButton" Click="BackButton_Click" Style="{DynamicResource MetroCircleButtonStyle}" Height="50" Width="50" Foreground="LightGray" Margin="0,0,20,0">
+                <iconPacks:PackIconModern Height="20" Width="20" Kind="ArrowLeft" Foreground="Gray" />
+            </Button>
+
+            <Separator VerticalAlignment="Bottom" Margin="4,0,2,0" />
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+
+                <Button Content="Calculate" Style="{DynamicResource SquareButtonStyle}" Width="150" Height="45" Grid.Row="0" Click="CalculateButton_Click" />
+                <Button Content="About" Style="{DynamicResource SquareButtonStyle}" Width="150" Height="45" Grid.Row="1" Click="AboutButton_Click" />
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TabControl Margin="10">
+                <TabItem Header="Period 1">
+                    <Border BorderBrush="LightGray" BorderThickness="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*" />
+                                <RowDefinition Height="6*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="6*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Content="Name: " FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                                <Label Content="Grade: " FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" />
+
+                                <TextBox Name="Class1NameBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                                <ComboBox Name="Class1DropDown" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" Grid.Row="1" Grid.Column="1" />
+                            </Grid>
+
+                            <GroupBox Header="Period 1 Assignment Grades" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Content="A:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="1" Grid.Column="0" Content="B:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="2" Grid.Column="0" Content="C:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="0" Grid.Column="2" Content="D:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="1" Grid.Column="2" Content="F:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                                    <TextBox Name="Class1A" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class1B" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class1C" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class1D" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class1F" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </Border>
+                </TabItem>
+
+                <TabItem Header="Period 2">
+                    <Border BorderBrush="LightGray" BorderThickness="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*" />
+                                <RowDefinition Height="6*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="6*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Content="Name: " FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                                <Label Content="Grade: " FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" />
+
+                                <TextBox Name="Class2NameBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                                <ComboBox Name="Class2DropDown" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" Grid.Row="1" Grid.Column="1" />
+                            </Grid>
+
+                            <GroupBox Header="Period 2 Assignment Grades" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Content="A:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="1" Grid.Column="0" Content="B:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="2" Grid.Column="0" Content="C:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="0" Grid.Column="2" Content="D:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="1" Grid.Column="2" Content="F:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                                    <TextBox Name="Class2A" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class2B" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class2C" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class2D" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class2F" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </Border>
+                </TabItem>
+            </TabControl>
+
+            <TabControl Margin="10" Grid.Column="1">
+                <TabItem Header="Period 3">
+                    <Border BorderBrush="LightGray" BorderThickness="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*" />
+                                <RowDefinition Height="6*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="6*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Content="Name: " FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                                <Label Content="Grade: " FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" />
+
+                                <TextBox Name="Class3NameBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                                <ComboBox Name="Class3DropDown" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" Grid.Row="1" Grid.Column="1" />
+                            </Grid>
+
+                            <GroupBox Header="Period 3 Assignment Grades" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Content="A:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="1" Grid.Column="0" Content="B:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="2" Grid.Column="0" Content="C:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="0" Grid.Column="2" Content="D:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="1" Grid.Column="2" Content="F:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                                    <TextBox Name="Class3A" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class3B" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class3C" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class3D" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class3F" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </Border>
+                </TabItem>
+
+                <TabItem Header="Period 4">
+                    <Border BorderBrush="LightGray" BorderThickness="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*" />
+                                <RowDefinition Height="6*" />
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="1*" />
+                                    <RowDefinition Height="1*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="6*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label Content="Name: " FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="0" Grid.Column="0" />
+                                <Label Content="Grade: " FontSize="15" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0" />
+
+                                <TextBox Name="Class4NameBox" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" VerticalContentAlignment="Center" Grid.Row="0" Grid.Column="1" />
+                                <ComboBox Name="Class4DropDown" HorizontalAlignment="Center" VerticalAlignment="Center" Width="130" Height="30" Grid.Row="1" Grid.Column="1" />
+                            </Grid>
+
+                            <GroupBox Header="Period 4 Assignment Grades" Grid.Row="1" Margin="5">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                        <ColumnDefinition Width="2*" />
+                                        <ColumnDefinition Width="3*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Content="A:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="1" Grid.Column="0" Content="B:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="2" Grid.Column="0" Content="C:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="0" Grid.Column="2" Content="D:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Grid.Row="1" Grid.Column="2" Content="F:" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                                    <TextBox Name="Class4A" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class4B" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class4C" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class4D" Grid.Row="0" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                    <TextBox Name="Class4F" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="50" Height="30" />
+                                </Grid>
+                            </GroupBox>
+                        </Grid>
+                    </Border>
+                </TabItem>
+            </TabControl>
+        </Grid>
+    </Grid>
+</Page>
